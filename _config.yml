@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Zixuan Tang"
-  avatar           : "/docs/assets/images/main_page/profile.jpg"
+  avatar           : "/assets/images/main_page/profile.jpg"
   bio              : "Always passionate about data"
   location         : "Paris, France"
   email            :
@@ -187,7 +187,7 @@ exclude:
   - Rakefile
   - README
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
+  - /docs
   - /test # ignore Minimal Mistakes /test
 keep_files:
   - .git
