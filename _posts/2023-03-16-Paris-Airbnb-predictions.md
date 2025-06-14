@@ -1,8 +1,8 @@
 ---
-title:  "Paris Airbnb visualization"
+title:  "Paris Airbnb predictions"
 search: false
 categories: 
-  - visualization
+  - machine learning
 last_modified_at: 2023-03-16T08:06:00-05:00
 ---
 
@@ -12,6 +12,6 @@ Our dataset was obtained from [**Kaggle**](https://www.kaggle.com/datasets/mysar
 
 In this project, our focus was on analyzing Airbnb accommodations in Paris, which comprises **37,907 listings and 972,309 reviews**. Our analysis uncovered some fascinating insights, which we are delighted to share with you.
 
-This page is for visualization. For machine learning models and predictions, please visit [Paris Airbnb predictions](https://zixtang.github.io/visualization/Paris-Airbnb-predictions/)
+This page is for machine learning models and predictions. For visualization, please visit [Paris Airbnb visualization](https://zixtang.github.io/visualization/Paris-Airbnb-visualization/)
 
 ```
