@@ -282,10 +282,11 @@ compress_html:
   ignore:
     envs: development
 
+source: docs
 
 # Defaults
 defaults:
-  _posts
+  # _posts
   - scope:
       path: ""
       type: posts
