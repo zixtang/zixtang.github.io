@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Zixuan Tang"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/assets/images/main_page/profile.jpg"
   bio              : "Always passionate about data"
   location         : "Paris, France"
   email            :
@@ -120,7 +120,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/zixtang"
     - label: "Google scholar"
-      icon: "fab fa-fw fa-google-scholar"
+      icon: "fab fa-fw fa-google"
       url: "https://scholar.google.com/citations?user=0wdUmgMAAAAJ&hl=en"
     - label: "Website"
       icon: "fas fa-fw fa-link"
