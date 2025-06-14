@@ -297,3 +297,9 @@ defaults:
       comments: # true
       share: true
       related: true
+
+nav:
+  - title: "About"
+    url: /about/
+  - title: "Blog"
+    url: /blog/
