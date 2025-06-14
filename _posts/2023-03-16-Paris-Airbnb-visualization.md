@@ -1,5 +1,7 @@
 ---
 title:  "Paris Airbnb visualization"
+toc: true
+toc_sticky: true
 search: false
 categories: 
   - visualization
@@ -20,15 +22,13 @@ Hey there! Welcome to our Airbnb analysis project. We hope you find the followin
 
 Our dataset was obtained from [**Kaggle**](https://www.kaggle.com/datasets/mysarahmadbhat/airbnb-listings-reviews/code?datasetId=1530930) and consists of information on Airbnb accommodations across 10 major cities, including 5 million reviews spanning from November 16th, 2008, to March 1st, 2021.
 
-In this project, our focus was on analyzing Airbnb accommodations in Paris, which comprises **37,907 listings and 972,309 reviews**. Our analysis uncovered some fascinating insights, which we are delighted to share with you.
+In this project, our focus was on analyzing Airbnb accommodations in Paris, which comprises <span class="color-blue">**37,907 listings and 972,309 reviews**</span>. Our analysis uncovered some fascinating insights, which we are delighted to share with you.
 
 This page is for visualization. For machine learning models and predictions, please visit:
 
 [Paris Airbnb predictions](https://zixtang.github.io/machine%20learning/Paris-Airbnb-predictions/)
 
 ---
-
-> 🏘️ **Table of content**
 
 # Where are the accommodations?
 
@@ -49,7 +49,7 @@ Are you curious to know the **exact locations** of these Airbnb accommodations i
 
 To measure **popularity**, we combined the accommodation and review datasets, and calculated **the number of reviews** for each accommodation. The distribution of the number of reviews per accommodation is highly right-skewed, with the number of reviews ranging from 1 to 427. The 0.25 quantile is 2 reviews, the median is 6 reviews, and the 0.75 quantile is 33 reviews. To improve visualization, we removed the outliers with a z-score greater than 3.
 
-![Distribution of number of reviews per accommodation](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/b898aa8f-f6a6-471f-ae90-e81c2ac34ace/nreview_dist.png)
+![Distribution of number of reviews per accommodation](/assets/images/2023-03-16-Paris-Airbnb-visualization/nreview_dist.png)
 
 Where are the popular accommodations located? We analyzed the average number of reviews for accommodations in each of the 20 arrondissements in Paris. We found that accommodations in **the center of Paris have the highest average number of reviews**, particularly in the **Louvre** (1st arrondissement) with average reviews reach 37.48, while **Menilmontant** (20th arrondissement) is at the lower end of the scale (18.85). Explore our interactive map to discover more!
 
