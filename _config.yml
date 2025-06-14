@@ -105,7 +105,7 @@ analytics:
 # Site Author
 author:
   name             : "Zixuan Tang"
-  avatar           : "/assets/images/main_page/profile.jpg"
+  avatar           : "/docs/assets/images/main_page/profile.jpg"
   bio              : "Always passionate about data"
   location         : "Paris, France"
   email            :
