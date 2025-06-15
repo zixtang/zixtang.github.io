@@ -7,20 +7,16 @@ search: false
 
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
+@import "custom";
+
 
 // body {
 //     font-size: 12px;
 //   }
 
-.post__content {
-    font-size: 12px;
-    // line-height: 1.6; /* 建议调整行高提升阅读体验 */
-  }    
-
 .color-blue {
     color: #3498db;
   }
-  .color-red {
+.color-red {
     color: #e74c3c;
   }
-  
