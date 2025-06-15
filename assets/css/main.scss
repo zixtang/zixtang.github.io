@@ -8,10 +8,14 @@ search: false
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
 @import "minimal-mistakes"; // main partials
 
-body {
-    font-size: 12px;
-  }
-  
+// body {
+//     font-size: 12px;
+//   }
+
+.post__content {
+    font-size: 14px;
+    // line-height: 1.6; /* 建议调整行高提升阅读体验 */
+  }    
 
 .color-blue {
     color: #3498db;

@@ -38,7 +38,7 @@ We created a location distribution map that shows the number and percentage of l
 
 To further explore the location distribution, we have included an interactive map below that provides more information. Simply hover your mouse over the map to uncover additional details!
 
-<iframe src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/babb5002-c7c4-463b-8ba9-e700ecf49b42/nlisting.html" style="width:100%; height:500px; border:none;"></iframe>
+<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/nlisting.html" width="100%" height="400px" frameborder="0"></iframe>
 
 Are you curious to know the **exact locations** of these Airbnb accommodations in Paris? Try to click on the colorful circles in the interactive map, and voila! You can also zoom in and out for more detailed information, including the precise location, arrondissement, room type, price, and number of reviews for each unique accommodation!  
 *(Quick heads up, it may take a moment for the map to load…*⌛️*)*
