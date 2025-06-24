@@ -45,6 +45,7 @@ Are you curious to know the <span class="color-red">**exact locations**</span> o
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/listing_cluster.html" width="100%" height="400px" frameborder="0"></iframe>
 
+---
 
 # Which accommodations are the most popular, and during which time of the year?
 
@@ -67,6 +68,7 @@ Our interactive map with a <span class="color-red">**time slider**</span> provid
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_slider.html" width="100%" height="400px" frameborder="0"></iframe>
 
+---
 
 # What are the prices of Airbnb accommodations?
 
@@ -90,7 +92,6 @@ To get a better idea of the prices in each arrondissement, check out our interac
 
 ---
 
-
 # What amenities are provided in the accommodations?
 
 When it comes to booking an Airbnb accommodation, it's important to make sure that you're getting all the amenities you need for a comfortable stay. From essential amenities like heating to conditional ones like a washing machine, it's important to check what the hosts are offering. And let's be real, who doesn't love finding some extra perks like hot tub and pool waiting for them?
@@ -107,6 +108,7 @@ Take a closer look at the amenities that matter most to you and see how many hos
 
 ![High-demanding amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png)
 
+---
 
 # Short-term rentals and Accommodation capacity
 
@@ -118,6 +120,7 @@ In addition, we looked into the capacity of the accommodations and found that th
 
 ![Bedroom and guest capacity](/assets/images/2023-03-16-Paris-Airbnb-visualization/bedroom_guest.png)
 
+---
 
 # Communication with hosts
 
