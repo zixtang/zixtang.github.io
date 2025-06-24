@@ -45,6 +45,7 @@ Are you curious to know the <span class="color-red">**exact locations**</span> o
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/listing_cluster.html" width="100%" height="400px" frameborder="0"></iframe>
 
+
 # Which accommodations are the most popular, and during which time of the year?
 
 To measure <span class="color-red">**popularity**</span>, we combined the accommodation and review datasets, and calculated <span class="color-red">**the number of reviews**</span> for each accommodation. The distribution of the number of reviews per accommodation is highly right-skewed, with the number of reviews ranging from 1 to 427. The 0.25 quantile is 2 reviews, the median is 6 reviews, and the 0.75 quantile is 33 reviews. To improve visualization, we removed the outliers with a z-score greater than 3.
@@ -66,7 +67,8 @@ Our interactive map with a <span class="color-red">**time slider**</span> provid
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_slider.html" width="100%" height="400px" frameborder="0"></iframe>
 
-# What are the prices **of Airbnb accommodations?**
+
+# What are the prices of Airbnb accommodations?
 
 The price is definitely something to consider when looking for an Airbnb accommodation! From cozy studios to luxurious apartments, Paris has it all. The prices of Airbnb accommodations in Paris vary greatly, with options ranging from 8€ to a jaw-dropping 12,000€! To get a better understanding of the price distribution, we analyzed the data and found that the 25th percentile of price is at 60€, the median is 88€, and the 75th percentile is at 125€.
 
@@ -88,6 +90,7 @@ To get a better idea of the prices in each arrondissement, check out our interac
 
 ---
 
+
 # What amenities are provided in the accommodations?
 
 When it comes to booking an Airbnb accommodation, it's important to make sure that you're getting all the amenities you need for a comfortable stay. From essential amenities like heating to conditional ones like a washing machine, it's important to check what the hosts are offering. And let's be real, who doesn't love finding some extra perks like hot tub and pool waiting for them?
@@ -104,7 +107,8 @@ Take a closer look at the amenities that matter most to you and see how many hos
 
 ![High-demanding amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png)
 
-# **Short-term rentals and** Accommodation capacity
+
+# Short-term rentals and Accommodation capacity
 
 During our exploration of the Airbnb market in Paris, we noticed that some accommodations are not intended for short-term rentals. While most of them offer short-term rentals that <span class="color-red">**require a minimum stay**</span> of less than a week, 5% of accommodations provide mid-term rentals that require a minimum booking of 8 to 30 nights. Moreover, only 1.15% of accommodations offer long-term rentals that require a minimum booking of at least 31 nights.
 
@@ -113,6 +117,7 @@ During our exploration of the Airbnb market in Paris, we noticed that some accom
 In addition, we looked into the capacity of the accommodations and found that the majority of them only have one bedroom (74.33%), 84.86% of accommodations are suitable for groups of no more than four people.
 
 ![Bedroom and guest capacity](/assets/images/2023-03-16-Paris-Airbnb-visualization/bedroom_guest.png)
+
 
 # Communication with hosts
 
