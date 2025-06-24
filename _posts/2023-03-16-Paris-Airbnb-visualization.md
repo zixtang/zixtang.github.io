@@ -8,13 +8,13 @@ categories:
 last_modified_at: 2023-03-16T08:06:00-05:00
 ---
 
-<span class="color-gray">*A visualization project on Paris Airbnb market. All the plots were generated using Python.*
+<span class="color-gray">*A visualization project on Paris Airbnb market. All the plots were generated using Python.*</span>
 
 ---
 
-Authors: [Zixuan Tang](https://www.linkedin.com/in/zixuantang/), [Ke Chen](https://www.linkedin.com/in/kechenkc/)
+<span class="color-gray">Authors: [Zixuan Tang](https://www.linkedin.com/in/zixuantang/), [Ke Chen](https://www.linkedin.com/in/kechenkc/)</span>
 
-Published: March, 2023</span>
+<span class="color-gray">Published: March, 2023</span>
 
 ---
 
@@ -80,11 +80,13 @@ To get a better idea of the prices in each arrondissement, check out our interac
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/price_map.html" width="100%" height="400px" frameborder="0"></iframe>
 
+<div class="notice--info">
+
 **A brief summary so far…**
 - The majority of Airbnb listings in Paris are located in the northeast region, but tourists tend to book accommodations in the city center, even if they come at a higher cost.  
 - Summer is the peak tourist season in Paris, although there are still travelers who visit during Christmas and new year.
-{: .notice--info}
 
+</div>
 
 ---
 

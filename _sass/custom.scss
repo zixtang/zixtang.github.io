@@ -2,4 +2,13 @@
     font-size: 16px !important;
     // line-height: 1.8;
   }
-  
+
+
+
+.notice--info,      // 淡蓝色背景
+.notice--primary,   // 黄
+.notice--warning,   // 红
+.notice--danger {   // 深蓝
+    font-size: 1em !important;
+    line-height: 1.6;
+  }
