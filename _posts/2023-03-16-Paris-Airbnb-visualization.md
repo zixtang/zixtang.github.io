@@ -83,6 +83,7 @@ To get a better idea of the prices in each arrondissement, check out our interac
 <div class="notice--info">
 
 **A brief summary so far…**
+
 - The majority of Airbnb listings in Paris are located in the northeast region, but tourists tend to book accommodations in the city center, even if they come at a higher cost.  
 - Summer is the peak tourist season in Paris, although there are still travelers who visit during Christmas and new year.
 
