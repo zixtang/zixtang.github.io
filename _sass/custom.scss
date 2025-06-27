@@ -12,3 +12,13 @@
     font-size: 1em !important;
     line-height: 1.6;
   }
+
+.notice--green {
+    border-left: 4px solid #27ae60; // 深绿
+    background-color: #eafaf1;     // 浅绿背景
+    padding: 1em 1.25em;
+    margin: 2em 0;
+    font-size: 1em;
+    border-radius: 0.25em;
+}
+  
