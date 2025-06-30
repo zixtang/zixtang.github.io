@@ -16,10 +16,11 @@ This page is for machine learning models and predictions. For visualization, ple
 
 ---
 
-As we delved into the Airbnb data for Paris, we stumbled upon a couple of fascinating questions that caught our attention:
-
-1. Can we **predict the price** of an accommodation with attributes of the accommodation and host?
-2. Can we predict the **popularity** of a rental by estimating **the number of reviews** it received?
+> As we delved into the Airbnb data for Paris, we stumbled upon a couple of fascinating questions that caught our attention:
+> 
+> 1. Can we **predict the price** of an accommodation with attributes of the accommodation and host?
+> 2. Can we predict the **popularity** of a rental by estimating **the number of reviews** it received?
+{: .notice--green}
 
 To get to the bottom of these questions, we experimented with a range of machine learning models, honed in on the most effective one, and used it to make our predictions. Our process and findings are outlined below, so read on to discover what we uncovered!
 

@@ -61,7 +61,7 @@ We also observed that the popularity of Airbnb accommodations in Paris increased
 
 Additionally, the popularity of accommodations in Paris is highly <span class="color-red">**seasonal**</span>, with the months of June, July, September, and October having the most reviews. Clearly, summer is the prime travel season!
 
-<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>{: width="120%" }{: .center-image }
+<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>
 
 Our interactive map with a <span class="color-red">**time slider**</span> provides a more detailed analysis of how reviews change with time in different arrondissements!  
 *(The time slider is on the top left corner, if it didn’t show up, please refresh the page)*
@@ -100,7 +100,22 @@ To help you get a better sense of what amenities are commonly provided, we dug i
 
 Take a closer look at the amenities that matter most to you and see how many hosts provide them!
 
-<div class="img-row">
+<table>
+  <tr>
+    <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" width="100%"></td>
+    <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" width="100%"></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" width="100%"></td>
+    <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" width="100%"></td>
+  </tr>
+</table>
+
+
+<!-- <div class="img-row">
   <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" />
   <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" />
 </div>
@@ -108,7 +123,7 @@ Take a closer look at the amenities that matter most to you and see how many hos
 <div class="img-row">
   <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" />
   <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" />
-</div>
+</div> -->
 
 
 <!-- ![Essential amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png){: width="60%" }
