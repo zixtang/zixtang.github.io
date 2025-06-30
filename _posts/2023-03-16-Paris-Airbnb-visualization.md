@@ -100,7 +100,7 @@ To help you get a better sense of what amenities are commonly provided, we dug i
 
 Take a closer look at the amenities that matter most to you and see how many hosts provide them!
 
-<table>
+<!-- <table>
   <tr>
     <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" width="100%"></td>
     <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" width="100%"></td>
@@ -112,18 +112,19 @@ Take a closer look at the amenities that matter most to you and see how many hos
     <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" width="100%"></td>
     <td><img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" width="100%"></td>
   </tr>
-</table>
+</table> -->
 
 
-<!-- <div class="img-row">
-  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" />
-  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" />
+<div class="img-row">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" alt="Essential Amenities">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" alt="Safety Amenities">
 </div>
 
 <div class="img-row">
-  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" />
-  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" />
-</div> -->
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" alt="Stand-out Amenities">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" alt="High-demand Amenities">
+</div>
+
 
 
 <!-- ![Essential amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png){: width="60%" }
