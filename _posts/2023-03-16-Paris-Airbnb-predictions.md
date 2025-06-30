@@ -10,7 +10,7 @@ Hey there! Welcome to our Airbnb analysis project. We hope you find the followin
 
 Our dataset was obtained from [**Kaggle**](https://www.kaggle.com/datasets/mysarahmadbhat/airbnb-listings-reviews/code?datasetId=1530930) and consists of information on Airbnb accommodations across 10 major cities, including 5 million reviews spanning from November 16th, 2008, to March 1st, 2021.
 
-In this project, our focus was on analyzing Airbnb accommodations in Paris, which comprises **37,907 listings and 972,309 reviews**. Our analysis uncovered some fascinating insights, which we are delighted to share with you.
+In this project, our focus was on analyzing Airbnb accommodations in Paris, which comprises <span class="color-red">**37,907 listings and 972,309 reviews**</span>. Our analysis uncovered some fascinating insights, which we are delighted to share with you.
 
 This page is for machine learning models and predictions. For visualization, please visit [Paris Airbnb visualization](https://zixtang.github.io/visualization/Paris-Airbnb-visualization/)
 
@@ -18,47 +18,44 @@ This page is for machine learning models and predictions. For visualization, ple
 
 > As we delved into the Airbnb data for Paris, we stumbled upon a couple of fascinating questions that caught our attention:
 > 
-> 1. Can we **predict the price** of an accommodation with attributes of the accommodation and host?
-> 2. Can we predict the **popularity** of a rental by estimating **the number of reviews** it received?
+> 1. Can we <span class="color-red">**predict the price**</span> of an accommodation with attributes of the accommodation and host?
+> 2. Can we predict the <span class="color-red">**popularity**</span> of a rental by estimating <span class="color-red">**the number of reviews**</span> it received?
 {: .notice--green}
 
 To get to the bottom of these questions, we experimented with a range of machine learning models, honed in on the most effective one, and used it to make our predictions. Our process and findings are outlined below, so read on to discover what we uncovered!
 
-<aside>
-🏘️ **Table of content**
-
-</aside>
+---
 
 # Data Preprocessing
 
 To get our data ready for analysis with scikit-learn, we had to do a little bit of prep work on our categorical variables. See, scikit-learn cannot directly handle variables that have multiple levels, so we had to make some changes:
 
-- We took the raw data set's 20 **arrondissements** and condensed them into just two categories: central (1) or non-central (0), depending on where they were located in Paris.
-- Next, we turned **room type** into four separate columns (entire place, hotel room, private room, and shared room) with binary values.
-- Finally, we grouped together different **amenities** and classified them into four types (essentials, stand-out, safety items, and high-demanding items) based on how often they appeared in the data set.
+- We took the raw data set's 20 <span class="color-brown">**arrondissements**</span> and condensed them into just two categories: central (1) or non-central (0), depending on where they were located in Paris.
+- Next, we turned <span class="color-brown">**room type**</span> into four separate columns (entire place, hotel room, private room, and shared room) with binary values.
+- Finally, we grouped together different <span class="color-brown">**amenities**</span> and classified them into four types (essentials, stand-out, safety items, and high-demanding items) based on how often they appeared in the data set.
+
+---
 
 # Feature Selection
 
 So, the original data set had 33 variables (or columns). But we quickly realized that some of them, like the accommodation name, host ID, were not really relevant to what we were trying to find out (namely, how price and popularity are determined). So, we gave those variables the boot after a bit of manual screening.
 After that, we performed correlation analysis to the variables with price and popularity, and carefully selected the characteristics that were most strongly correlated with each outcome variable and ended up with a pretty solid set of results.
 
-<aside>
-💡 **Selected features for price prediction:**
-accommodates, bedrooms, instant_bookable, host_is_superhost, central_location, amenities_essenstials, amenities_standout, amenities_safety, amenities_highdemand, entire place, hotel room, private room, shared room
+> 💡 **Selected features for price prediction:**
+> accommodates, bedrooms, instant_bookable, host_is_superhost, central_location, amenities_essenstials, amenities_standout, amenities_safety, amenities_highdemand, entire place, hotel room, private room, shared room
 
-</aside>
+> 💡 **Selected features for number of reviews prediction:**
+> accommodates, instant_bookable, host_is_superhost, central_location, amenities_essenstials, amenities_standout, amenities_safety, amenities_highdemand, entire place, hotel room, private room, shared room, price
 
-<aside>
-💡 **Selected features for number of reviews prediction:**
-accommodates, instant_bookable, host_is_superhost, central_location, amenities_essenstials, amenities_standout, amenities_safety, amenities_highdemand, entire place, hotel room, private room, shared room, price
-
-</aside>
+---
 
 # Machine Learning Model Building
 
 Now, here's the real meat of the matter: which machine learning model reigns as the champion when it comes to predicting price and number of reviews?
-To find out, we put three of the most widely-used models to the test: **linear regression**, **polynomial regression**, and **random forest regression**. We gave them all a fair shot and carefully compared their performances to determine the ultimate winner (which we'll reveal in just a bit).
+To find out, we put three of the most widely-used models to the test: <span class="color-brown">**linear regression**</span>, <span class="color-brown">**polynomial regression**</span>, and <span class="color-brown">**random forest regression**</span>. We gave them all a fair shot and carefully compared their performances to determine the ultimate winner (which we'll reveal in just a bit).
 We did this process twice, once for price prediction and once for number of reviews prediction. Since the methods were pretty similar, we'll just show you the code we used for price prediction. Ready to dive in?
+
+---
 
 ## Split the Dataset
 
@@ -72,6 +69,7 @@ x_cv, x_test, y_cv, y_test = train_test_split(x_, y_, test_size=0.50, random_sta
 # Delete temporary variables
 del x_, y_
 ```
+---
 
 ## Linear Regression
 
@@ -101,6 +99,7 @@ print("R2-score for training data: %.2f" %  regr.score(x_train_scaled, y_train))
 print("Residual sum of squares (MSE) for cross-validation data: %.2f" % mean_squared_error(y_cv, yhat_cv))
 print("R2-score for cross-validation data: %.2f" %  regr.score(x_cv_scaled, y_cv))
 ```
+---
 
 ## Polynomial Regression
 
@@ -160,17 +159,29 @@ Let’s see which polynomial degree works better:
 
 **For price prediction:**
 
-![poly_price_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bba9c54a-3ead-4471-a02a-b3d45656220a/poly_price_mse.png)
+<div class="img-row">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_price_mse.png" alt="poly_price_mse">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_price_r2score.png" alt="poly_price_r2score">
+</div>
 
-![poly_price_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07bc04f0-7331-482f-b349-bdd852c35f58/poly_price_r2score.png)
+<!-- ![poly_price_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bba9c54a-3ead-4471-a02a-b3d45656220a/poly_price_mse.png)
+
+![poly_price_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07bc04f0-7331-482f-b349-bdd852c35f58/poly_price_r2score.png) -->
 
 **For number of reviews prediction:**
 
-![poly_popularity_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/defc0279-9b62-4486-8fcf-bb829c401074/poly_popularity_mse.png)
+<div class="img-row">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_popularity_mse.png" alt="poly_popularity_mse">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_popularity_r2score.png" alt="poly_popularity_r2score">
+</div>
 
-![poly_popularity_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71872e9f-a927-4439-b8eb-1b4f45a3f4e3/poly_popularity_r2score.png)
+<!-- ![poly_popularity_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/defc0279-9b62-4486-8fcf-bb829c401074/poly_popularity_mse.png)
+
+![poly_popularity_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71872e9f-a927-4439-b8eb-1b4f45a3f4e3/poly_popularity_r2score.png) -->
 
 As the y-axis scales are too large (over 1e20), it's difficult to distinguish the differences between degree = 2 and degree = 3. Therefore, we recorded the values to compare them directly in the [Model Selection](https://www.notion.so/Paris-Airbnb-predictions-d1514367a0a9439fae6d44d0013d03c9?pvs=21) part.
+
+---
 
 ## Random Forest Regression
 

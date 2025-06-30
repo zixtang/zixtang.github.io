@@ -3,8 +3,6 @@
     // line-height: 1.8;
   }
 
-
-
 .notice--info,      // 淡蓝色背景
 .notice--primary,   // 黄
 .notice--warning,   // 红
@@ -27,8 +25,9 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
-  .img-row {
+
+// 图片并排
+.img-row {
     display: flex;
     gap: 1em;
     justify-content: center;
@@ -41,4 +40,28 @@
       border: none;
     }
   }
+
+// 自定义代码块样式（仿 ChatGPT 风格）
+.highlight {
+    background: #1e1e1e !important; // 深灰底色
+    color: #dcdcdc !important;     // 主文字颜色
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
+  }
+  
+  // 关键字、函数、类名等高亮
+  .highlight .k     { color: #569cd6; } // 关键字
+  .highlight .kd    { color: #c586c0; }
+  .highlight .nb    { color: #4ec9b0; }
+  .highlight .nf    { color: #dcdcaa; } // 函数名
+  .highlight .nc    { color: #4ec9b0; } // 类名
+  .highlight .s     { color: #ce9178; } // 字符串
+  .highlight .mi    { color: #b5cea8; } // 数字
+  .highlight .c     { color: #6a9955; font-style: italic; } // 注释
+  .highlight .o     { color: #d4d4d4; } // 运算符
+  .highlight .p     { color:
   
