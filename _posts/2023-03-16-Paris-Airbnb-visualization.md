@@ -61,7 +61,7 @@ We also observed that the popularity of Airbnb accommodations in Paris increased
 
 Additionally, the popularity of accommodations in Paris is highly <span class="color-red">**seasonal**</span>, with the months of June, July, September, and October having the most reviews. Clearly, summer is the prime travel season!
 
-<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>{: width="75%" }
+<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>{: width="120%" }{: .center-image }
 
 Our interactive map with a <span class="color-red">**time slider**</span> provides a more detailed analysis of how reviews change with time in different arrondissements!  
 *(The time slider is on the top left corner, if it didn’t show up, please refresh the page)*
@@ -125,7 +125,7 @@ Take a closer look at the amenities that matter most to you and see how many hos
 
 During our exploration of the Airbnb market in Paris, we noticed that some accommodations are not intended for short-term rentals. While most of them offer short-term rentals that <span class="color-red">**require a minimum stay**</span> of less than a week, 5% of accommodations provide mid-term rentals that require a minimum booking of 8 to 30 nights. Moreover, only 1.15% of accommodations offer long-term rentals that require a minimum booking of at least 31 nights.
 
-![Minimum nights for rentals](/assets/images/2023-03-16-Paris-Airbnb-visualization/minimum_nights.png){: width="75%" }{: .center-image }
+![Minimum nights for rentals](/assets/images/2023-03-16-Paris-Airbnb-visualization/minimum_nights.png){: width="85%" }{: .center-image }
 
 In addition, we looked into the capacity of the accommodations and found that the majority of them only have one bedroom (74.33%), 84.86% of accommodations are suitable for groups of no more than four people.
 

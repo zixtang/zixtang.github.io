@@ -27,4 +27,16 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+.img-row {
+    display: flex;
+    gap: 1em;
+    justify-content: center;
+    align-items: flex-start;
+  
+    img {
+      width: 45%; // 或你想要的比例
+      height: auto;
+    }
+}
   
