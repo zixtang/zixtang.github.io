@@ -51,7 +51,7 @@ Are you curious to know the <span class="color-red">**exact locations**</span> o
 
 To measure <span class="color-red">**popularity**</span>, we combined the accommodation and review datasets, and calculated <span class="color-red">**the number of reviews**</span> for each accommodation. The distribution of the number of reviews per accommodation is highly right-skewed, with the number of reviews ranging from 1 to 427. The 0.25 quantile is 2 reviews, the median is 6 reviews, and the 0.75 quantile is 33 reviews. To improve visualization, we removed the outliers with a z-score greater than 3.
 
-![Distribution of number of reviews per accommodation](/assets/images/2023-03-16-Paris-Airbnb-visualization/nreview_dist.png){: width="75%" }
+![Distribution of number of reviews per accommodation](/assets/images/2023-03-16-Paris-Airbnb-visualization/nreview_dist.png){: width="75%" }{: .center-image }
 
 Where are the popular accommodations located? We analyzed the average number of reviews for accommodations in each of the 20 arrondissements in Paris. We found that accommodations in <span class="color-red">**the center of Paris have the highest average number of reviews**</span>, particularly in the <span class="color-blue">**Louvre**</span> (1st arrondissement) with average reviews reach 37.48, while <span class="color-yellow">**Menilmontant**</span> (20th arrondissement) is at the lower end of the scale (18.85). Explore our interactive map to discover more!
 
@@ -61,7 +61,7 @@ We also observed that the popularity of Airbnb accommodations in Paris increased
 
 Additionally, the popularity of accommodations in Paris is highly <span class="color-red">**seasonal**</span>, with the months of June, July, September, and October having the most reviews. Clearly, summer is the prime travel season!
 
-<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>
+<iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/review_time.html" width="100%" height="400px" frameborder="0"></iframe>{: width="75%" }
 
 Our interactive map with a <span class="color-red">**time slider**</span> provides a more detailed analysis of how reviews change with time in different arrondissements!  
 *(The time slider is on the top left corner, if it didn’t show up, please refresh the page)*
@@ -76,7 +76,7 @@ The price is definitely something to consider when looking for an Airbnb accommo
 
 Similar to the number of reviews, the price distribution is highly skewed to the right, so we removed outliers with a z-score greater than 3 for better visualization.
 
-![Price distribution of Airbnb accommodations](/assets/images/2023-03-16-Paris-Airbnb-visualization/price_dist.png){: width="75%" }
+![Price distribution of Airbnb accommodations](/assets/images/2023-03-16-Paris-Airbnb-visualization/price_dist.png){: width="75%" }{: .center-image }
 
 But wait, there's more! We also analyzed the average prices of Airbnb accommodations in each of the 20 arrondissements in Paris. While accommodations in <span class="color-red">**the center of Paris are generally more expensive**</span>, but the most expensive arrondissement is actually <span class="color-blue">**Elysee**</span> (8th arrondissement), with an average price of 204.08€. On the other hand, the cheapest arrondissement is <span class="color-yellow">**Menilmontant**</span> (20th arrondissement), with an average price of 75.57€. The price difference between Elysee and Menilmontant is huge, with Elysee being 2.7 times more expensive than Menilmontant!
 
@@ -100,13 +100,24 @@ To help you get a better sense of what amenities are commonly provided, we dug i
 
 Take a closer look at the amenities that matter most to you and see how many hosts provide them!
 
-![Essential amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png){: width="60%" }
+<div class="img-row">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png" />
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png" />
+</div>
+
+<div class="img-row">
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png" />
+  <img src="/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png" />
+</div>
+
+
+<!-- ![Essential amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_ess.png){: width="60%" }
 
 ![Stand-out amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_so.png){: width="60%" }
 
 ![Safety amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_safe.png){: width="60%" }
 
-![High-demanding amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png){: width="60%" }
+![High-demanding amenities](/assets/images/2023-03-16-Paris-Airbnb-visualization/amenities_hd.png){: width="60%" } -->
 
 ---
 
@@ -114,7 +125,7 @@ Take a closer look at the amenities that matter most to you and see how many hos
 
 During our exploration of the Airbnb market in Paris, we noticed that some accommodations are not intended for short-term rentals. While most of them offer short-term rentals that <span class="color-red">**require a minimum stay**</span> of less than a week, 5% of accommodations provide mid-term rentals that require a minimum booking of 8 to 30 nights. Moreover, only 1.15% of accommodations offer long-term rentals that require a minimum booking of at least 31 nights.
 
-![Minimum nights for rentals](/assets/images/2023-03-16-Paris-Airbnb-visualization/minimum_nights.png){: width="75%" }
+![Minimum nights for rentals](/assets/images/2023-03-16-Paris-Airbnb-visualization/minimum_nights.png){: width="75%" }{: .center-image }
 
 In addition, we looked into the capacity of the accommodations and found that the majority of them only have one bedroom (74.33%), 84.86% of accommodations are suitable for groups of no more than four people.
 
