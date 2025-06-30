@@ -63,5 +63,9 @@
   .highlight .mi    { color: #b5cea8; } // 数字
   .highlight .c     { color: #6a9955; font-style: italic; } // 注释
   .highlight .o     { color: #d4d4d4; } // 运算符
-  .highlight .p     { color:
+  .highlight .p     { color: #d4d4d4; } // 括号等
   
+  // 代码块中选中效果
+  .highlight code::selection {
+    background: #264f78;
+  }
