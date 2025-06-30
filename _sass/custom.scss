@@ -69,3 +69,13 @@
   .highlight code::selection {
     background: #264f78;
   }
+
+  .scrollable-code {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f8f8f8;
+  }
+  

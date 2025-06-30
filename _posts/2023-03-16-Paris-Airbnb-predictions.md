@@ -1,5 +1,7 @@
 ---
 title:  "Paris Airbnb predictions"
+toc: true
+toc_sticky: true
 search: false
 categories: 
   - machine learning
@@ -55,12 +57,12 @@ Now, here's the real meat of the matter: which machine learning model reigns as 
 To find out, we put three of the most widely-used models to the test: <span class="color-brown">**linear regression**</span>, <span class="color-brown">**polynomial regression**</span>, and <span class="color-brown">**random forest regression**</span>. We gave them all a fair shot and carefully compared their performances to determine the ultimate winner (which we'll reveal in just a bit).
 We did this process twice, once for price prediction and once for number of reviews prediction. Since the methods were pretty similar, we'll just show you the code we used for price prediction. Ready to dive in?
 
----
 
 ## Split the Dataset
 
 We took our dataset and divided it into three separate groups: training data, cross-validation data, and test data. The training data was used to teach our models how to make predictions, while the cross-validation data was used to assess how well our models were performing. Finally, once we had selected the top-performing model, we put it to the test on the remaining test data to see just how accurate its predictions would be.
 
+<div class="scrollable-code">
 ```python
 # Get 60% of the dataset as the training set. Put the remaining 40% in temporary variables: x_ and y_.
 x_train, x_, y_train, y_ = train_test_split(x_data, y_data, test_size=0.40, random_state=42)
@@ -68,13 +70,13 @@ x_train, x_, y_train, y_ = train_test_split(x_data, y_data, test_size=0.40, rand
 x_cv, x_test, y_cv, y_test = train_test_split(x_, y_, test_size=0.50, random_state=42)
 # Delete temporary variables
 del x_, y_
-```
----
+</div> ```
 
 ## Linear Regression
 
 We first tried the linear regression model:
 
+<div class="scrollable-code">
 ```python
 from sklearn import preprocessing
 from sklearn import linear_model
@@ -98,13 +100,13 @@ print("R2-score for training data: %.2f" %  regr.score(x_train_scaled, y_train))
 # get the MSE and  r2-score for the cross-validation data
 print("Residual sum of squares (MSE) for cross-validation data: %.2f" % mean_squared_error(y_cv, yhat_cv))
 print("R2-score for cross-validation data: %.2f" %  regr.score(x_cv_scaled, y_cv))
-```
----
+</div> ```
 
 ## Polynomial Regression
 
 Then, we tried three polynomial regression models with degrees of 2, 3 and 4 
 
+<div class="scrollable-code">
 ```python
 # Initialize lists containing the results, models, and scalers
 train_mses = []
@@ -153,7 +155,7 @@ for degree in range(2,5):
     # Compute the cross validation r2 score
     cv_score = model.score(X_cv_mapped_scaled, y_cv)
     cv_scores.append(cv_score)
-```
+</div> ```
 
 Let’s see which polynomial degree works better:
 
@@ -164,10 +166,6 @@ Let’s see which polynomial degree works better:
   <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_price_r2score.png" alt="poly_price_r2score">
 </div>
 
-<!-- ![poly_price_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/bba9c54a-3ead-4471-a02a-b3d45656220a/poly_price_mse.png)
-
-![poly_price_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/07bc04f0-7331-482f-b349-bdd852c35f58/poly_price_r2score.png) -->
-
 **For number of reviews prediction:**
 
 <div class="img-row">
@@ -175,13 +173,8 @@ Let’s see which polynomial degree works better:
   <img src="/assets/images/2023-03-16-Paris-Airbnb-predictions/poly_popularity_r2score.png" alt="poly_popularity_r2score">
 </div>
 
-<!-- ![poly_popularity_mse.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/defc0279-9b62-4486-8fcf-bb829c401074/poly_popularity_mse.png)
+As the y-axis scales are too large (over 1e20), it's difficult to distinguish the differences between degree = 2 and degree = 3. Therefore, we recorded the values to compare them directly in the [Model Selection](#model-selection) part.
 
-![poly_popularity_r2score.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/71872e9f-a927-4439-b8eb-1b4f45a3f4e3/poly_popularity_r2score.png) -->
-
-As the y-axis scales are too large (over 1e20), it's difficult to distinguish the differences between degree = 2 and degree = 3. Therefore, we recorded the values to compare them directly in the [Model Selection](https://www.notion.so/Paris-Airbnb-predictions-d1514367a0a9439fae6d44d0013d03c9?pvs=21) part.
-
----
 
 ## Random Forest Regression
 
@@ -189,6 +182,7 @@ As the y-axis scales are too large (over 1e20), it's difficult to distinguish th
 
 Before we could get started with the scikit-learn random forest regression, we needed to make a quick adjustment. Since this method doesn't work with numerical values,  we had to find the optimal threshold for our continuous variables and then transform them into binary variables for use by the algorithm.
 
+<div class="scrollable-code">
 ```python
 # define a function to find the information gain
 from chefboost.training import Training
@@ -201,8 +195,9 @@ def findGain(df, column, threshold):
     temp_df.loc[idx,column] = '<='+str(threshold)
     gain = Training.findGains(temp_df,config)['gains'][column]
     return threshold, gain
-```
+</div> ```
 
+<div class="scrollable-code">
 ```python
 # find thresholds of continuous predictors for price prediction
 accommodates_binary = data[['accommodates', 'price']]
@@ -225,14 +220,15 @@ threshold_bedrooms = sorted_bedrooms[-1]
 
 print(threshold_accommodates)
 print(threshold_bedrooms)
-```
+</div> ```
 
 With these steps, we successfully determined the optimal thresholds for `accommodates` and `bedrooms`, enabling us to convert them into binary variables.
 
+<div class="scrollable-code">
 ```python
 data['accommodates_morethan5'] = np.where(data['accommodates'] > 5, 1, 0)
 data['bedrooms_morethan3'] = np.where(data['bedrooms'] > 3, 1, 0)
-```
+</div> ```
 
 A similar approach was used to convert continuous variables to binary for number of reviews prediction using random forest regression.
 
@@ -240,6 +236,7 @@ A similar approach was used to convert continuous variables to binary for number
 
 We then used `GridSearchCV` to find the optimal parameters to be used in random forest regression, and the optimal parameters are `max_depth = 32`, and `min_samples_split = 100`.
 
+<div class="scrollable-code">
 ```python
 # search for the best parameters for random forest regression
 from sklearn.model_selection import GridSearchCV
@@ -249,10 +246,11 @@ RFR = RandomForestRegressor()
 Grid_result = GridSearchCV(RFR, parameters, cv = 4)
 Grid_result.fit(x_train, y_train)
 BestRFR = Grid_result.best_estimator_
-```
+</div> ```
 
 - **Step 3: Establish and Fit Random Forest Regression**
 
+<div class="scrollable-code">
 ```python
 RFR = RandomForestRegressor(n_estimators=100, criterion = "mse", max_depth=32, min_samples_split=100)
 RFR.fit(x_train, y_train)
@@ -272,7 +270,8 @@ print("Training score is:", score_train)
 #Compute the cross validation MSE and R2 score
 print("CV mse is:", cv_mse)
 print("CV score is:", score_cv)
-```
+</div> ```
+
 ---
 
 # Model selection
@@ -289,11 +288,9 @@ For price prediction models:
 | Polynomial regression (degree = 4) | 25863.11 | 0.27 | 4.38e+25 | -8.75e+20 |
 | Random forest regression | 28186.23 | 0.20 | 44924.21 | 0.10 |
 
-<aside>
-💡 **Conclusion:**
-**The winner model for price prediction is: polynomial regression with degree of 3!**
-
-</aside>
+> 💡 **Conclusion:**
+> <span class="color-red">**The winner model for price prediction is: polynomial regression with degree of 3!**</span>
+{: .notice--green}
 
 For number of reviews prediction models:
 
@@ -305,11 +302,11 @@ For number of reviews prediction models:
 | Polynomial regression (degree = 4) | 1680.90 | 0.22 | 2.84e+25 |  -1.39e+22 |
 | Random forest regression | 1815.32 | 0.15 | **1776.79** | **0.13** |
 
-<aside>
-💡 **Conclusion: 
-The winner model for number of reviews prediction is: random forest regression!**
+> 💡 **Conclusion:**
+> span class="color-red">**The winner model for number of reviews prediction is: random forest regression!**</span>
+{: .notice--green}
 
-</aside>
+---
 
 # Test data prediction
 
@@ -317,6 +314,7 @@ Now let’s use the winner models for prediction!
 
 ## Price prediction
 
+<div class="scrollable-code">
 ```python
 poly = PolynomialFeatures(3, include_bias=False)
 X_test_mapped = poly.fit_transform(x_test)
@@ -331,20 +329,18 @@ test_score = models[3-1].score(X_test_mapped_scaled, y_test)
 
 print(f"Test MSE: {test_mse:.2f}")
 print(f"Test R squared: {test_score:.4f}")
-```
+</div> ```
 
-<aside>
-💡 MSE for test data prediction is 52713.14.
-R-squared score for test data prediction is 0.10.
-
-</aside>
+> 💡 MSE for test data prediction is 52713.14.
+> R-squared score for test data prediction is 0.10.
 
 **The distribution of the actual and predicted price:**
 
-![price_prediction_distribution.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/967cd1b2-505f-4d8b-8117-c67482a54fe1/price_prediction_distribution.png)
+![price_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/price_prediction_distribution.png){: width="85%" }{: .center-image }
 
 ## Number of reviews prediction
 
+<div class="scrollable-code">
 ```python
 # use ranfom forest regression
 RFG = RandomForestRegressor(n_estimators=100, criterion = "mse", max_depth=8, min_samples_split=100)
@@ -358,22 +354,17 @@ test_mse = mean_squared_error(y_test, yhat_test)
 
 print("test score is:", score_test)
 print("test mse is:", test_mse)
-```
+</div> ```
 
-<aside>
-💡 MSE for test data prediction is 1588.07.
-R-squared score for test data prediction is 0.12.
-
-</aside>
+> 💡 MSE for test data prediction is 1588.07.
+> R-squared score for test data prediction is 0.12.
 
 **The distribution of the actual and predicted number of reviews:**
 
-![Popularity_prediction_distribution.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c1c0cc16-b33f-448f-9576-dba138014228/Popularity_prediction_distribution.png)
+![Popularity_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/Popularity_prediction_distribution.png){: width="85%" }{: .center-image }
 
-<aside>
-💡 **There was a significant overlap between the predicted values and the real values for both price and number of reviews!**
+> 💡 **There was a significant overlap between the predicted values and the real values for both price and number of reviews!**
 
-</aside>
 
 ---
 
