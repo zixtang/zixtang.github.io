@@ -273,6 +273,7 @@ print("Training score is:", score_train)
 print("CV mse is:", cv_mse)
 print("CV score is:", score_cv)
 ```
+---
 
 # Model selection
 
