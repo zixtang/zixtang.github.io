@@ -62,7 +62,6 @@ We did this process twice, once for price prediction and once for number of revi
 
 We took our dataset and divided it into three separate groups: training data, cross-validation data, and test data. The training data was used to teach our models how to make predictions, while the cross-validation data was used to assess how well our models were performing. Finally, once we had selected the top-performing model, we put it to the test on the remaining test data to see just how accurate its predictions would be.
 
-<div class="scrollable-code">
 ```python
 # Get 60% of the dataset as the training set. Put the remaining 40% in temporary variables: x_ and y_.
 x_train, x_, y_train, y_ = train_test_split(x_data, y_data, test_size=0.40, random_state=42)
@@ -70,13 +69,12 @@ x_train, x_, y_train, y_ = train_test_split(x_data, y_data, test_size=0.40, rand
 x_cv, x_test, y_cv, y_test = train_test_split(x_, y_, test_size=0.50, random_state=42)
 # Delete temporary variables
 del x_, y_
-<!-- </div> ``` -->
+```
 
 ## Linear Regression
 
 We first tried the linear regression model:
 
-<div class="scrollable-code">
 ```python
 from sklearn import preprocessing
 from sklearn import linear_model
@@ -100,13 +98,13 @@ print("R2-score for training data: %.2f" %  regr.score(x_train_scaled, y_train))
 # get the MSE and  r2-score for the cross-validation data
 print("Residual sum of squares (MSE) for cross-validation data: %.2f" % mean_squared_error(y_cv, yhat_cv))
 print("R2-score for cross-validation data: %.2f" %  regr.score(x_cv_scaled, y_cv))
-</div> ```
+```
+{: .scrollable-code}
 
 ## Polynomial Regression
 
 Then, we tried three polynomial regression models with degrees of 2, 3 and 4 
 
-<div class="scrollable-code">
 ```python
 # Initialize lists containing the results, models, and scalers
 train_mses = []
@@ -155,7 +153,7 @@ for degree in range(2,5):
     # Compute the cross validation r2 score
     cv_score = model.score(X_cv_mapped_scaled, y_cv)
     cv_scores.append(cv_score)
-</div> ```
+```
 
 Let’s see which polynomial degree works better:
 
@@ -182,7 +180,6 @@ As the y-axis scales are too large (over 1e20), it's difficult to distinguish th
 
 Before we could get started with the scikit-learn random forest regression, we needed to make a quick adjustment. Since this method doesn't work with numerical values,  we had to find the optimal threshold for our continuous variables and then transform them into binary variables for use by the algorithm.
 
-<div class="scrollable-code">
 ```python
 # define a function to find the information gain
 from chefboost.training import Training
@@ -195,9 +192,8 @@ def findGain(df, column, threshold):
     temp_df.loc[idx,column] = '<='+str(threshold)
     gain = Training.findGains(temp_df,config)['gains'][column]
     return threshold, gain
-</div> ```
+```
 
-<div class="scrollable-code">
 ```python
 # find thresholds of continuous predictors for price prediction
 accommodates_binary = data[['accommodates', 'price']]
@@ -220,15 +216,14 @@ threshold_bedrooms = sorted_bedrooms[-1]
 
 print(threshold_accommodates)
 print(threshold_bedrooms)
-</div> ```
+```
 
 With these steps, we successfully determined the optimal thresholds for `accommodates` and `bedrooms`, enabling us to convert them into binary variables.
 
-<div class="scrollable-code">
 ```python
 data['accommodates_morethan5'] = np.where(data['accommodates'] > 5, 1, 0)
 data['bedrooms_morethan3'] = np.where(data['bedrooms'] > 3, 1, 0)
-</div> ```
+```
 
 A similar approach was used to convert continuous variables to binary for number of reviews prediction using random forest regression.
 
@@ -236,7 +231,6 @@ A similar approach was used to convert continuous variables to binary for number
 
 We then used `GridSearchCV` to find the optimal parameters to be used in random forest regression, and the optimal parameters are `max_depth = 32`, and `min_samples_split = 100`.
 
-<div class="scrollable-code">
 ```python
 # search for the best parameters for random forest regression
 from sklearn.model_selection import GridSearchCV
@@ -246,11 +240,10 @@ RFR = RandomForestRegressor()
 Grid_result = GridSearchCV(RFR, parameters, cv = 4)
 Grid_result.fit(x_train, y_train)
 BestRFR = Grid_result.best_estimator_
-</div> ```
+```
 
 - **Step 3: Establish and Fit Random Forest Regression**
 
-<div class="scrollable-code">
 ```python
 RFR = RandomForestRegressor(n_estimators=100, criterion = "mse", max_depth=32, min_samples_split=100)
 RFR.fit(x_train, y_train)
@@ -270,8 +263,7 @@ print("Training score is:", score_train)
 #Compute the cross validation MSE and R2 score
 print("CV mse is:", cv_mse)
 print("CV score is:", score_cv)
-</div> ```
-
+```
 ---
 
 # Model selection
@@ -314,7 +306,6 @@ Now let’s use the winner models for prediction!
 
 ## Price prediction
 
-<div class="scrollable-code">
 ```python
 poly = PolynomialFeatures(3, include_bias=False)
 X_test_mapped = poly.fit_transform(x_test)
@@ -329,7 +320,7 @@ test_score = models[3-1].score(X_test_mapped_scaled, y_test)
 
 print(f"Test MSE: {test_mse:.2f}")
 print(f"Test R squared: {test_score:.4f}")
-</div> ```
+```
 
 > 💡 MSE for test data prediction is 52713.14.
 > R-squared score for test data prediction is 0.10.
@@ -340,7 +331,6 @@ print(f"Test R squared: {test_score:.4f}")
 
 ## Number of reviews prediction
 
-<div class="scrollable-code">
 ```python
 # use ranfom forest regression
 RFG = RandomForestRegressor(n_estimators=100, criterion = "mse", max_depth=8, min_samples_split=100)
@@ -354,7 +344,7 @@ test_mse = mean_squared_error(y_test, yhat_test)
 
 print("test score is:", score_test)
 print("test mse is:", test_mse)
-</div> ```
+```
 
 > 💡 MSE for test data prediction is 1588.07.
 > R-squared score for test data prediction is 0.12.
