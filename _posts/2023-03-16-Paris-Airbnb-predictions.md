@@ -99,7 +99,7 @@ print("R2-score for training data: %.2f" %  regr.score(x_train_scaled, y_train))
 print("Residual sum of squares (MSE) for cross-validation data: %.2f" % mean_squared_error(y_cv, yhat_cv))
 print("R2-score for cross-validation data: %.2f" %  regr.score(x_cv_scaled, y_cv))
 ```
-{: .scrollable-code}
+<!-- {: .scrollable-code} -->
 
 ## Polynomial Regression
 
