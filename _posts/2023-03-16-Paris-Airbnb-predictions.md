@@ -70,7 +70,7 @@ x_train, x_, y_train, y_ = train_test_split(x_data, y_data, test_size=0.40, rand
 x_cv, x_test, y_cv, y_test = train_test_split(x_, y_, test_size=0.50, random_state=42)
 # Delete temporary variables
 del x_, y_
-</div> ```
+<!-- </div> ``` -->
 
 ## Linear Regression
 

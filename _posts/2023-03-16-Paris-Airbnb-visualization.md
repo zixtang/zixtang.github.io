@@ -41,7 +41,6 @@ To further explore the location distribution, we have included an interactive ma
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/nlisting.html" width="100%" height="400px" frameborder="0"></iframe>
 
 Are you curious to know the <span class="color-red">**exact locations**</span> of these Airbnb accommodations in Paris? Try to click on the colorful circles in the interactive map, and voila! You can also zoom in and out for more detailed information, including the precise location, arrondissement, room type, price, and number of reviews for each unique accommodation!  
-<span class="color-gray">*(Quick heads up, it may take a moment for the map to load…*⌛️*)*</span>
 
 <iframe src="/assets/images/2023-03-16-Paris-Airbnb-visualization/listing_cluster.html" width="100%" height="400px" frameborder="0"></iframe>
 
