@@ -41,84 +41,74 @@
     }
   }
   
-// ======================
-// ChatGPT 风格代码块（浅色）
-// ======================
+// ========== ChatGPT 风格代码块样式 ==========
 
-// 外层容器修复
-.highlighter-rouge {
-    background: none !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-  
-  // 主代码块样式
-  .highlight {
-    background: #f6f8fa !important;         // 浅灰背景
-    color: #24292f !important;              // 主文本颜色
-    border-radius: 6px !important;
-    border: 1px solid #d0d7de !important;   // 浅灰边框
+// 整个代码块容器
+.highlight {
+    background: #f6f8fa !important;  // 浅灰背景
+    color: #24292f !important;       // 主文字颜色
+    border-radius: 6px !important;   // 圆角
     padding: 1rem !important;
     overflow-x: auto !important;
-    max-height: 400px;
-    font-family: SFMono-Regular, Consolas, Menlo, Monaco, "Courier New", monospace !important;
-    font-size: 0.95em;
-    line-height: 1.6;
-  
-    white-space: pre;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace !important;
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+    border: none !important;         // 去掉边框
+    box-shadow: none !important;     // 去掉阴影
   }
   
-  // pre 和 code 保持一致
+  // 去掉 <pre> 和 <code> 自带背景、边距
   .highlight pre,
   .highlight code {
-    background: transparent !important;
-    color: inherit !important;
     font-family: inherit !important;
     font-size: inherit !important;
     line-height: inherit !important;
+    color: inherit !important;
+    background: transparent !important;
     margin: 0 !important;
     padding: 0 !important;
   }
   
-  // ======================
-  // Rouge 语法高亮配色
-  // ======================
+  // 关键字、函数、类名等高亮
+  .highlight .k,
+  .highlight .kd {
+    color: #d73a49 !important;  // 红色关键字
+  }
   
-  .highlight .c     { color: #6a737d; font-style: italic; } // 注释
-  .highlight .err   { color: #d73a49; }                     // 错误
-  .highlight .k     { color: #d73a49; }                     // 关键字
-  .highlight .o     { color: #d73a49; }                     // 运算符
-  .highlight .cm    { color: #6a737d; font-style: italic; } // 多行注释
-  .highlight .cp    { color: #6f42c1; }                     // 宏预处理
-  .highlight .c1    { color: #6a737d; font-style: italic; } // 单行注释
-  .highlight .cs    { color: #6a737d; font-style: italic; } // 特殊注释
-  .highlight .gd    { color: #b31d28; }                     // 删除
-  .highlight .ge    { font-style: italic; }
-  .highlight .gh    { color: #005cc5; }                     // 标题
-  .highlight .gi    { color: #22863a; }                     // 插入
-  .highlight .gp    { color: #24292f; }                     // 提示符
-  .highlight .gs    { font-weight: bold; }
-  .highlight .gu    { color: #24292f; }                     // 下划线
-  .highlight .gt    { color: #d73a49; }                     // 错误
-  .highlight .kc    { color: #d73a49; }                     // 常量
-  .highlight .kd    { color: #d73a49; }                     // 声明
-  .highlight .kn    { color: #d73a49; }                     // 关键字
-  .highlight .kp    { color: #d73a49; }                     // 关键字
-  .highlight .kr    { color: #d73a49; }                     // 关键字
-  .highlight .kt    { color: #005cc5; }                     // 类型
-  .highlight .m     { color: #005cc5; }                     // 数字
-  .highlight .s     { color: #032f62; }                     // 字符串
-  .highlight .na    { color: #6f42c1; }                     // 属性名
-  .highlight .nb    { color: #24292f; }                     // 内建名
-  .highlight .nc    { color: #6f42c1; }                     // 类名
-  .highlight .no    { color: #005cc5; }                     // 常量
-  .highlight .nd    { color: #6f42c1; }                     // 装饰器
-  .highlight .ni    { color: #24292f; }                     // 命名空间
-  .highlight .ne    { color: #6f42c1; }                     // 异常
-  .highlight .nf    { color: #6f42c1; }                     // 函数
-  .highlight .nl    { color: #24292f; }                     // 标签
-  .highlight .nn    { color: #6f42c1; }                     // 类名
-  .highlight .nt    { color: #22863a; }                     // HTML 标签
-  .highlight .nv    { color: #24292f; }                     // 变量
+  .highlight .nf {
+    color: #6f42c1 !important;  // 函数名紫色
+  }
+  
+  .highlight .nc {
+    color: #005cc5 !important;  // 类名蓝色
+  }
+  
+  .highlight .s {
+    color: #032f62 !important;  // 字符串深蓝
+  }
+  
+  .highlight .mi,
+  .highlight .m {
+    color: #005cc5 !important;  // 数字蓝色
+  }
+  
+  .highlight .c {
+    color: #6a737d !important;  // 注释灰色
+    font-style: italic;
+  }
+  
+  .highlight .o,
+  .highlight .p {
+    color: #24292f !important;  // 运算符、括号
+  }
+  
+  .highlight .nv,
+  .highlight .n {
+    color: #24292f !important;  // 变量名深灰
+  }
+  
+  // 鼠标选中代码时的高亮
+  .highlight code::selection {
+    background: #c8e1ff !important;
+  }
   
