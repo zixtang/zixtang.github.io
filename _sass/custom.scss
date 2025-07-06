@@ -108,7 +108,7 @@
   }
   
   .highlight .c {
-    color: #548164 !important;  // 注释灰色
+    color: #6a9955 !important;  // 注释绿色
     font-style: italic;
   }
   
@@ -121,6 +121,12 @@
   .highlight .n {
     color: #24292f !important;  // 变量名深灰
   }
+
+  .highlight .bp, 
+  .highlight .nb {
+  color: #569cd6 !important;
+  }
+
   
   // 鼠标选中代码时的高亮
   .highlight code::selection {
