@@ -42,9 +42,9 @@
   }
   
 // ChatGPT 风格代码块
-.highlight {
-    background: #1e1e1e;
-    color: #dcdcdc;
+.highlighter-rouge .highlight {
+    background: #1e1e1e !important;
+    color: #dcdcdc !important;
     border-radius: 8px;
     padding: 1rem;
     overflow-x: auto;
@@ -53,57 +53,12 @@
     line-height: 1.5;
   }
   
-  // 去掉 pre/code 自带的背景和边距
-  .highlight pre,
-  .highlight code {
-    background: none;
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
-    margin: 0;
-    padding: 0;
-  }
-  
-  // 选中效果
-  .highlight code::selection {
-    background: #264f78;
-  }
-  
-  // 变量名
-  .highlight .n {
-    color: #9cdcfe;
-  }
-  
-  // 关键字
-  .highlight .k {
-    color: #569cd6;
-    font-weight: normal;
-  }
-  
-  // 注释
-  .highlight .c1 {
-    color: #6a9955;
-    font-style: italic;
-  }
-  
-  // 浮点数
-  .highlight .mf {
-    color: #b5cea8;
-  }
-  
-  // 整数
-  .highlight .mi {
-    color: #b5cea8;
-  }
-  
-  // 运算符
-  .highlight .o {
-    color: #d4d4d4;
-  }
-  
-  // 标点
-  .highlight .p {
-    color: #d4d4d4;
-  }
+  .language-python.highlighter-rouge .highlight .k  { color: #569cd6; }
+  .language-python.highlighter-rouge .highlight .kd { color: #c586c0; }
+  .language-python.highlighter-rouge .highlight .nb { color: #4ec9b0; }
+  .language-python.highlighter-rouge .highlight .nf { color: #dcdcaa; }
+  .language-python.highlighter-rouge .highlight .nc { color: #4ec9b0; }
+  .language-python.highlighter-rouge .highlight .s  { color: #ce9178; }
+  .language-python.highlighter-rouge .highlight .mi { color: #b5cea8; }
+  .language-python.highlighter-rouge .highlight .c1 { color: #6a9955; font-style: italic; }
   
