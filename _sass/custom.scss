@@ -41,33 +41,117 @@
     }
   }
   
-// ========== ChatGPT 风格代码块样式 ==========
+// ======================
+// ChatGPT 风格代码块（浅色）
+// ======================
 
-// 整个代码块容器
-.highlight {
-    background: #f6f8fa !important;  // 浅灰背景
-    color: #24292f !important;       // 主文字颜色
-    border-radius: 6px !important;   // 圆角
-    padding: 1rem !important;
-    overflow-x: auto !important;
-    font-family: Consolas, Menlo, Monaco, "Courier New", monospace !important;
-    font-size: 0.9rem !important;
-    line-height: 1.5 !important;
-    border: none !important;         // 去掉边框
-    box-shadow: none !important;     // 去掉阴影
+// 外层容器修复
+.highlighter-rouge {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
-  // 去掉 <pre> 和 <code> 自带背景、边距
+  // 主代码块样式
+  .highlight {
+    background: #f6f8fa !important;         // 浅灰背景
+    color: #24292f !important;              // 主文本颜色
+    border-radius: 6px !important;
+    border: none !important;   // 浅灰边框
+    padding: 1rem !important;
+    overflow-x: auto !important;
+    max-height: 400px;
+    font-family: SFMono-Regular, Consolas, Menlo, Monaco, "Courier New", monospace !important;
+    font-size: 0.95em;
+    line-height: 1.6;
+  
+    white-space: pre;
+  }
+  
+  // pre 和 code 保持一致
   .highlight pre,
   .highlight code {
+    background: transparent !important;
+    color: inherit !important;
     font-family: inherit !important;
     font-size: inherit !important;
     line-height: inherit !important;
-    color: inherit !important;
-    background: transparent !important;
     margin: 0 !important;
     padding: 0 !important;
   }
+  
+  // ======================
+  // Rouge 语法高亮配色
+  // ======================
+  
+//   .highlight .c     { color: #6a737d; font-style: italic; } // 注释
+//   .highlight .err   { color: #d73a49; }                     // 错误
+//   .highlight .k     { color: #d73a49; }                     // 关键字
+//   .highlight .o     { color: #d73a49; }                     // 运算符
+//   .highlight .cm    { color: #6a737d; font-style: italic; } // 多行注释
+//   .highlight .cp    { color: #6f42c1; }                     // 宏预处理
+//   .highlight .c1    { color: #6a737d; font-style: italic; } // 单行注释
+//   .highlight .cs    { color: #6a737d; font-style: italic; } // 特殊注释
+//   .highlight .gd    { color: #b31d28; }                     // 删除
+//   .highlight .ge    { font-style: italic; }
+//   .highlight .gh    { color: #005cc5; }                     // 标题
+//   .highlight .gi    { color: #22863a; }                     // 插入
+//   .highlight .gp    { color: #24292f; }                     // 提示符
+//   .highlight .gs    { font-weight: bold; }
+//   .highlight .gu    { color: #24292f; }                     // 下划线
+//   .highlight .gt    { color: #d73a49; }                     // 错误
+//   .highlight .kc    { color: #d73a49; }                     // 常量
+//   .highlight .kd    { color: #d73a49; }                     // 声明
+//   .highlight .kn    { color: #d73a49; }                     // 关键字
+//   .highlight .kp    { color: #d73a49; }                     // 关键字
+//   .highlight .kr    { color: #d73a49; }                     // 关键字
+//   .highlight .kt    { color: #005cc5; }                     // 类型
+//   .highlight .m     { color: #005cc5; }                     // 数字
+//   .highlight .s     { color: #032f62; }                     // 字符串
+//   .highlight .na    { color: #6f42c1; }                     // 属性名
+//   .highlight .nb    { color: #24292f; }                     // 内建名
+//   .highlight .nc    { color: #6f42c1; }                     // 类名
+//   .highlight .no    { color: #005cc5; }                     // 常量
+//   .highlight .nd    { color: #6f42c1; }                     // 装饰器
+//   .highlight .ni    { color: #24292f; }                     // 命名空间
+//   .highlight .ne    { color: #6f42c1; }                     // 异常
+//   .highlight .nf    { color: #6f42c1; }                     // 函数
+//   .highlight .nl    { color: #24292f; }                     // 标签
+//   .highlight .nn    { color: #6f42c1; }                     // 类名
+//   .highlight .nt    { color: #22863a; }                     // HTML 标签
+//   .highlight .nv    { color: #24292f; }                     // 变量
+  
+
+
+
+  // ========== ChatGPT 风格代码块样式 ==========
+
+// 整个代码块容器
+// .highlight {
+//     background: #f6f8fa !important;  // 浅灰背景
+//     color: #24292f !important;       // 主文字颜色
+//     border-radius: 6px !important;   // 圆角
+//     padding: 1rem !important;
+//     overflow-x: auto !important;
+//     font-family: Consolas, Menlo, Monaco, "Courier New", monospace !important;
+//     font-size: 0.9rem !important;
+//     line-height: 1.5 !important;
+//     border: none !important;         // 去掉边框
+//     box-shadow: none !important;     // 去掉阴影
+//   }
+  
+//   // 去掉 <pre> 和 <code> 自带背景、边距
+//   .highlight pre,
+//   .highlight code {
+//     font-family: inherit !important;
+//     font-size: inherit !important;
+//     line-height: inherit !important;
+//     color: inherit !important;
+//     background: transparent !important;
+//     margin: 0 !important;
+//     padding: 0 !important;
+//   }
   
   // 关键字、函数、类名等高亮
   .highlight .k,
