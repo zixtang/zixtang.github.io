@@ -86,6 +86,7 @@
   // ======================
   
   .highlight .k,
+  .highlight .kn,
   .highlight .kd {
     color: #d73a49 !important;  // 红色关键字
   }
@@ -94,8 +95,9 @@
     color: #6f42c1 !important;  // 函数名紫色
   }
   
+  .highlight .nn
   .highlight .nc {
-    color: #005cc5 !important;  // 类名蓝色
+        color: #005cc5 !important;  // 类名蓝色
   }
   
   .highlight .s {
@@ -106,8 +108,11 @@
   .highlight .m {
     color: #005cc5 !important;  // 数字蓝色
   }
-  
-  .highlight .c1 {
+
+  .highlight .c,
+  .highlight .c1,
+  .highlight .c2,
+  .highlight .cm {
     color: #6a9955 !important;  // 注释绿色
     font-style: italic;
   }
