@@ -276,7 +276,7 @@ For price prediction models:
 | --- | --- | --- | --- | --- |
 | Linear regression | 30973.83 | 0.12 | 45885.77 | 0.08 |
 | Polynomial regression (degree = 2) | 29598.55 | 0.16 | 44672.02 | 0.11 |
-| Polynomial regression (degree = 3) | 28461.11 | 0.19 | **44057.44** |  **0.12** |
+| Polynomial regression (degree = 3) | 28461.11 | 0.19 | <span class="color-red">**44057.44**</span> |  <span class="color-red">**0.12**</span> |
 | Polynomial regression (degree = 4) | 25863.11 | 0.27 | 4.38e+25 | -8.75e+20 |
 | Random forest regression | 28186.23 | 0.20 | 44924.21 | 0.10 |
 
@@ -292,7 +292,7 @@ For number of reviews prediction models:
 | Polynomial regression (degree = 2) | 1864.29 | 0.13 | 1778.09 | 0.13 |
 | Polynomial regression (degree = 3) | 1802.10 | 0.16 | 2889.94 |  -0.42 |
 | Polynomial regression (degree = 4) | 1680.90 | 0.22 | 2.84e+25 |  -1.39e+22 |
-| Random forest regression | 1815.32 | 0.15 | **1776.79** | **0.13** |
+| Random forest regression | 1815.32 | 0.15 | <span class="color-red">**1776.79**</span> | <span class="color-red">**0.13**</span> |
 
 > 💡 **Conclusion:**
 > span class="color-red">**The winner model for number of reviews prediction is: random forest regression!**</span>
@@ -327,7 +327,7 @@ print(f"Test R squared: {test_score:.4f}")
 
 **The distribution of the actual and predicted price:**
 
-![price_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/price_prediction_distribution.png){: width="85%" }{: .center-image }
+![price_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/price_prediction_distribution.png){: width="75%" }{: .center-image }
 
 ## Number of reviews prediction
 
@@ -351,7 +351,7 @@ print("test mse is:", test_mse)
 
 **The distribution of the actual and predicted number of reviews:**
 
-![Popularity_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/Popularity_prediction_distribution.png){: width="85%" }{: .center-image }
+![Popularity_prediction_distribution.png](/assets/images/2023-03-16-Paris-Airbnb-predictions/Popularity_prediction_distribution.png){: width="75%" }{: .center-image }
 
 > 💡 **There was a significant overlap between the predicted values and the real values for both price and number of reviews!**
 
