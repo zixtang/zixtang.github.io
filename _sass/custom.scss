@@ -40,45 +40,70 @@
       border: none;
     }
   }
-
-// 自定义代码块样式（仿 ChatGPT 风格）
+  
+// ChatGPT 风格代码块
 .highlight {
-    background: #1e1e1e !important; // 深灰底色
-    color: #dcdcdc !important;     // 主文字颜色
-    border-radius: 8px !important;
-    padding: 1rem !important;
-    overflow-x: auto !important;
-    font-family: Consolas, Menlo, Monaco, "Courier New", monospace !important;
-    font-size: 0.9em !important;
-    line-height: 1.5 !important;
+    background: #1e1e1e;
+    color: #dcdcdc;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-size: 0.9em;
+    line-height: 1.5;
   }
   
-  // 额外设置 <pre> 和 <code> 保持字体一致性和继承
+  // 去掉 pre/code 自带的背景和边距
   .highlight pre,
   .highlight code {
-    font-family: inherit !important;
-    font-size: inherit !important;
-    line-height: inherit !important;
-    color: inherit !important;
-    background: transparent !important;
-    margin: 0 !important;
-    padding: 0 !important;
+    background: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
   }
   
-  // 关键字、函数、类名等高亮
-  .highlight .k     { color: #569cd6; } // 关键字
-  .highlight .kd    { color: #c586c0; }
-  .highlight .nb    { color: #4ec9b0; }
-  .highlight .nf    { color: #dcdcaa; } // 函数名
-  .highlight .nc    { color: #4ec9b0; } // 类名
-  .highlight .s     { color: #ce9178; } // 字符串
-  .highlight .mi    { color: #b5cea8; } // 数字
-  .highlight .c     { color: #6a9955; font-style: italic; } // 注释
-  .highlight .o     { color: #d4d4d4; } // 运算符
-  .highlight .p     { color: #d4d4d4; } // 括号等
-  
-  // 代码块中选中效果
+  // 选中效果
   .highlight code::selection {
     background: #264f78;
+  }
+  
+  // 变量名
+  .highlight .n {
+    color: #9cdcfe;
+  }
+  
+  // 关键字
+  .highlight .k {
+    color: #569cd6;
+    font-weight: normal;
+  }
+  
+  // 注释
+  .highlight .c1 {
+    color: #6a9955;
+    font-style: italic;
+  }
+  
+  // 浮点数
+  .highlight .mf {
+    color: #b5cea8;
+  }
+  
+  // 整数
+  .highlight .mi {
+    color: #b5cea8;
+  }
+  
+  // 运算符
+  .highlight .o {
+    color: #d4d4d4;
+  }
+  
+  // 标点
+  .highlight .p {
+    color: #d4d4d4;
   }
   
