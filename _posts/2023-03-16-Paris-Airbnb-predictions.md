@@ -295,7 +295,7 @@ For number of reviews prediction models:
 | Random forest regression | 1815.32 | 0.15 | <span class="color-red">**1776.79**</span> | <span class="color-red">**0.13**</span> |
 
 > 💡 **Conclusion:**
-> span class="color-red">**The winner model for number of reviews prediction is: random forest regression!**</span>
+> <span class="color-red">**The winner model for number of reviews prediction is: random forest regression!**</span>
 {: .notice--green}
 
 ---
