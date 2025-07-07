@@ -8,6 +8,16 @@ categories:
 last_modified_at: 2023-03-16T08:06:00-05:00
 ---
 
+<span class="color-gray">*A machine learning project on Paris Airbnb market. All the models were developed using Python.*</span>
+
+---
+
+<span class="color-gray">Authors: [Zixuan Tang](https://www.linkedin.com/in/zixuantang/), [Ke Chen](https://www.linkedin.com/in/kechenkc/)</span>
+
+<span class="color-gray">Published: March, 2023</span>
+
+---
+
 Hey there! Welcome to our Airbnb analysis project. We hope you find the following information informative and interesting!!
 
 Our dataset was obtained from [**Kaggle**](https://www.kaggle.com/datasets/mysarahmadbhat/airbnb-listings-reviews/code?datasetId=1530930) and consists of information on Airbnb accommodations across 10 major cities, including 5 million reviews spanning from November 16th, 2008, to March 1st, 2021.
